@@ -1,0 +1,36 @@
+//Calculadora
+
+Console.WriteLine("Digite um valor: ");
+double num1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Digite outro valor: ");
+double num2 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Escolha a operação, digite:\n 1 para soma,\n 2 para subtração,\n 3 para multiplicação,\n 4 para divisão\n");
+double operador = Convert.ToDouble(Console.ReadLine());
+
+switch (operador)
+{
+    case 1:
+        Console.WriteLine($" O resultado foi: {num1 + num2}");
+        break;
+    case 2:
+        Console.WriteLine($" O resultado foi: {num1 - num2}");
+        break;
+    case 3:
+        Console.WriteLine($" O resultado foi: {num1 * num2}");
+        break;
+    case 4:
+        if (num2 != 0)
+        {
+            Console.WriteLine($" O resultado foi: {num1 / num2}");
+
+        }
+        else
+        {
+            Console.WriteLine("Não é possível dividir por zero, tente outro valor!");
+        }
+        break;
+    default:
+        Console.WriteLine("Resultado Inesperado!: Insira uma opção válida!");
+        break;
+}
